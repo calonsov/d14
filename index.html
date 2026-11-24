@@ -1,5 +1,60 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>Mi web</title></head>
-<body><h1>¡Hola mundo!</h1></body>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D14 · Próximamente</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      background: #000;
+      color: #ff1f1f;
+      font-family: "Arial Black", Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background: radial-gradient(circle at center, rgba(255,0,0,0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .logo {
+      width: clamp(90px, 14vw, 160px);
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: clamp(5rem, 22vw, 16rem);
+      line-height: 1;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 25px rgba(255,0,0,0.6), 0 0 60px rgba(255,0,0,0.3);
+    }
+    p {
+      margin-top: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1rem, 3vw, 1.6rem);
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #ff5a5a;
+      opacity: 0.85;
+    }
+    p::after { content: "_"; animation: blink 1s steps(1) infinite; }
+    @keyframes pulse {
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.5)); transform: scale(1); }
+      50% { filter: drop-shadow(0 0 18px rgba(255,0,0,0.9)); transform: scale(1.04); }
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+  <img class="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY0MDQwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzliMDAwMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii01MCUiIHk9Ii01MCUiIHdpZHRoPSIyMDAlIiBoZWlnaHQ9IjIwMCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzIiByZXN1bHQ9ImIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDwhLS0gYW5pbGxvIGJhc2UgdGVudWUgLS0+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmYyYTJhIiBzdHJva2Utb3BhY2l0eT0iMC4xNSIgc3Ryb2tlLXdpZHRoPSI2Ii8+CiAgPCEtLSBhcmNvIGV4dGVyaW9yIGdpcmF0b3JpbyAtLT4KICA8ZyBmaWx0ZXI9InVybCgjZ2xvdykiPgogICAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2cpIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMTgwIDM3MyI+CiAgICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDEwMCAxMDAiIHRvPSIzNjAgMTAwIDEwMCIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgIDwvY2lyY2xlPgogIDwvZz4KICA8IS0tIGFuaWxsbyBpbnRlcmlvciBkaXNjb250aW51byBnaXJhbmRvIGFsIHJldsOpcyAtLT4KICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9IjcyIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZjJhMmEiIHN0cm9rZS1vcGFjaXR5PSIwLjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iNCAxMCI+CiAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgZnJvbT0iMzYwIDEwMCAxMDAiIHRvPSIwIDEwMCAxMDAiIGR1cj0iMTJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogIDwvY2lyY2xlPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTIxIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjU4IiBmaWxsPSJ1cmwoI2cpIiBmaWx0ZXI9InVybCgjZ2xvdykiPkQxNDwvdGV4dD4KPC9zdmc+Cg==" alt="Logo D14">
+  <h1>D14</h1>
+  <p>Próximamente</p>
+</body>
 </html>
