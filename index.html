@@ -44,6 +44,11 @@
       color: #ff5a5a;
       opacity: 0.85;
     }
+    p::before { content: "_"; animation: blink 1s steps(1) infinite; }
+    @keyframes pulse {
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.5)); transform: scale(1); }
+      50% { filter: drop-shadow(0 0 18px rgba(255,0,0,0.9)); transform: scale(1.04); }
+    }
     p::after { content: "_"; animation: blink 1s steps(1) infinite; }
     @keyframes pulse {
       0%, 100% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.5)); transform: scale(1); }
